@@ -10,16 +10,16 @@ namespace EmployeeManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly IEmployeeRepository _iemp;
-        public HomeController(IEmployeeRepository emp)
+        private readonly IEmployeeRepository _iemployeeRepository;
+        public HomeController(IEmployeeRepository employeeRepository)
         {
-            _iemp = emp;
+            _iemployeeRepository = employeeRepository;
         }
         public IActionResult Index()
         {
-            HomeDetailsViewModel model = new HomeDetailsViewModel()
+            HomeIndexViewModel model = new HomeIndexViewModel()
             {
-                Employees = _iemp.GetAll(),
+                Employees = _iemployeeRepository.GetAll(),
                 PageTitle = "Employees Home Page",
             };
             return View(model);
@@ -29,7 +29,7 @@ namespace EmployeeManagement.Controllers
         {
             HomeDetailsViewModel model = new HomeDetailsViewModel()
             {
-                Employee = _iemp.GetEmployee(id),
+                Employee = _iemployeeRepository.GetEmployee(id),
                 PageTitle = "Employee details",
             };
             return View(model);

@@ -34,3 +34,4 @@ C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.csproj.CopyComplete
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Details.cshtml.g.cs
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
