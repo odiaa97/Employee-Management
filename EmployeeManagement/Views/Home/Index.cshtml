@@ -1,7 +1,46 @@
-﻿@{
-    ViewData["Title"] = "Index";
-}
+﻿@model EmployeeManagement.ViewModels.HomeDetailsViewModel
 
-<h2>Index</h2>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @{
+        Layout = "_Layout";
+    }
+    <div>
+        <h1>@Model.PageTitle</h1>
+    </div>
 
-<p>Hello from our View Template!</p>
+    <div class="table-responsive-sm">
+        <table class="table table-dark table-bordered table-hover">
+            <caption>Company Staff</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var employee in @Model.Employees)
+                    {
+                        <tr>
+                            <td>@employee.Name</td>
+                            <td>@employee.Email</td>
+                            <td>@employee.Department</td>
+                            <td>
+                                <button class="btn btn-warning" style="display: block; margin:auto;">Details</button>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+

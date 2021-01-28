@@ -1,0 +1,36 @@
+﻿@model EmployeeManagement.ViewModels.HomeDetailsViewModel
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    @{
+        Layout = "_Layout";
+    }
+    <div>
+        <h1>@Model.PageTitle</h1>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>@Model.Employee.Name</td>
+                    <td>@Model.Employee.Email</td>
+                    <td>@Model.Employee.Department</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+
