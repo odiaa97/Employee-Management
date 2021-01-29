@@ -16,6 +16,7 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Department</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -24,6 +25,7 @@
                     <td>@Model.Employee.Name</td>
                     <td>@Model.Employee.Email</td>
                     <td>@Model.Employee.Department</td>
+                    <td><a asp-controller="home" asp-action="index" class="btn btn-info">Back</a></td>
                 </tr>
             </tbody>
         </table>
