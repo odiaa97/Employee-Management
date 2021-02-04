@@ -47,3 +47,4 @@ C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net5
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\EmployeeManagement.csprojAssemblyReference.cache
+C:\Users\ODIAN\source\repos\EmployeeManagement\EmployeeManagement\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs

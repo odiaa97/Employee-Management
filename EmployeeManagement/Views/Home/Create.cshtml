@@ -1,0 +1,29 @@
+﻿@model Employee
+<form method="post" action="/home/create">
+    <div class="form-group mt-3">
+        <input asp-for="Name" class="form-control" name="Name" placeholder="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input asp-for="Email" class="form-control" name="Email" placeholder="Email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <select asp-for="Department" class="custom-select" name="Department"
+                asp-items="Html.GetEnumSelectList<Dept>()"
+                placeholder="Department" data-val="true"
+                data-val-required="Department field is required">
+            <option value="">Please Select</option>
+        </select>
+        <span asp-validation-for="Department" class="text-danger"></span>
+    </div>
+
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Create</button>
+    </div>
+
+</form>
