@@ -8,8 +8,13 @@ namespace EmployeeManagement.Models
     public interface IEmployeeRepository
     {
         public Employee GetEmployee(int id);
-        public List<Employee> GetAll();
+        public IEnumerable<Employee> GetAll();
 
         public Employee Add(Employee employee);
+        public Employee Update(Employee employee);
+
+        public Employee Delete(int id);
+
+
     }
 }

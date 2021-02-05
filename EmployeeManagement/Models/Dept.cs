@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 namespace EmployeeManagement.Models
 {
-        public enum Dept
-        {
-            None,
-            IT,
-            Marketing,
-            Sales,
-            RD
-        }
+    public enum Dept
+    {
+        None,
+        IT,
+        Marketing,
+        Sales,
+        RD
+    }
 }

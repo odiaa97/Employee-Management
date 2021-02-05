@@ -17,6 +17,6 @@ namespace EmployeeManagement.Models
             ErrorMessage ="Invalid Email Format")]
         public string Email { get; set; }
         [Required]
-        public Dept? Department { get; set; }
+        public Dept department { get; set; }
     }
 }

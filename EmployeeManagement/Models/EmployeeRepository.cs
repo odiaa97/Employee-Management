@@ -7,31 +7,44 @@ namespace EmployeeManagement.Models
 {
     public class EmployeeRepository: IEmployeeRepository
     {
-        private List<Employee> employee_list;
-        public EmployeeRepository()
+        private readonly AppDbContext context;
+        public EmployeeRepository(AppDbContext context)
         {
-            employee_list = new List<Employee>()
-            {
-                new Employee() { Id = 1, Name = "Ali", Email="Ali@gmail.com", Department=Dept.IT},
-                new Employee() { Id = 2, Name = "Ahmed", Email="Ahmed@gmail.com", Department=Dept.Marketing},
-                new Employee() { Id = 3, Name = "Mohamed", Email="Mohamed@gmail.com", Department=Dept.Sales},
-                new Employee() { Id = 4, Name = "Mostafa", Email="Mostafa@gmail.com", Department=Dept.RD}
-            };
+            this.context = context;
         }
         public Employee GetEmployee(int id)
         {
-            return employee_list.FirstOrDefault(e => e.Id == id);
+            return context.Employees.Find(id);
         }
-
-        public List<Employee> GetAll()
+        
+        public IEnumerable<Employee> GetAll()
         {
-            return employee_list;
+            return context.Employees;
         }
 
         public Employee Add(Employee employee)
         {
-            employee.Id =  employee_list.Max(e => e.Id) + 1;
-            employee_list.Add(employee);
+            context.Employees.Add(employee);
+            context.SaveChanges();
+            return employee;
+        }
+
+        public Employee Update(Employee employee)
+        {
+            var newEmployee = context.Employees.Attach(employee);
+            newEmployee.State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            context.SaveChanges();
+            return employee;
+        }
+
+        public Employee Delete(int id)
+        {
+            Employee employee = context.Employees.Find(id);
+            if(employee != null)
+            {
+                context.Employees.Remove(employee);
+                context.SaveChanges();
+            }
             return employee;
         }
     }

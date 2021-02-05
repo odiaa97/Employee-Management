@@ -36,10 +36,9 @@
                             </td>
                             <td>@employee.Name</td>
                             <td>@employee.Email</td>
-                            <td>@employee.Department</td>
+                            <td>@employee.department</td>
                             <td>
-                                <a asp-controller="Home" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-primary">View</a>
-                                <a href="#" class="btn btn-warning">Edit</a>
+                                <a asp-controller="Home" asp-action="Details" asp-route-id="@employee.Id" class="btn btn-warning">Edit</a>
                                 <a href="#" class="btn btn-danger">Delete</a>
                             </td>
                         </tr>
