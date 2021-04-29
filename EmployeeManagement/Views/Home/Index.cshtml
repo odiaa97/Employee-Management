@@ -1,6 +1,7 @@
 ﻿@model HomeIndexViewModel
 @{ 
     ViewData["Title"] = "Home";
+
 }
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -27,10 +28,11 @@
                 @{
                     foreach (var employee in @Model.Employees)
                     {
+                        var PhotoPath = "~/Images/" + (employee.PhotoPath ?? "person-icon.png");
                         <tr>
                             <td>
                                 <img class="rounded-circle z-depth-2" alt="50x50" width="50" height="50"
-                                    src="~/Images/person-icon.png"
+                                    src="@PhotoPath"
                                     data-holder-rendered="true"
                                      asp-append-version="true">
                             </td>

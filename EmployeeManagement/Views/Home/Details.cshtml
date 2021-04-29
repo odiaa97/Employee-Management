@@ -1,4 +1,8 @@
 ﻿@model HomeDetailsViewModel
+@{
+    var PhotoPath = "~/Images/" + (Model.Employee.PhotoPath ?? "person-icon.png");
+
+}
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
@@ -10,9 +14,11 @@
     </div>
 
     <div>
+
         <table class="table">
             <thead class="thead-dark">
                 <tr>
+                    <th></th>
                     <th>Name</th>
                     <th>Email</th>
                     <th>Department</th>
@@ -22,6 +28,12 @@
 
             <tbody>
                 <tr>
+                    <td>
+                        <img class="rounded-circle z-depth-2" alt="50x50" width="50" height="50"
+                             src="@PhotoPath"
+                             data-holder-rendered="true"
+                             asp-append-version="true">
+                    </td>
                     <td>@Model.Employee.Name</td>
                     <td>@Model.Employee.Email</td>
                     <td>@Model.Employee.department</td>

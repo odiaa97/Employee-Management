@@ -11,6 +11,6 @@ namespace EmployeeManagement.Models
         IT,
         Marketing,
         Sales,
-        RD
+        HR
     }
 }
